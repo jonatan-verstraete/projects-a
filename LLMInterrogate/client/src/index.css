@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(220, 8%, 8%);
+  --foreground: hsl(210, 8%, 90%);
+  --card: hsl(220, 8%, 12%);
+  --card-foreground: hsl(210, 8%, 90%);
+  --popover: hsl(220, 8%, 14%);
+  --popover-foreground: hsl(210, 8%, 90%);
+  --primary: hsl(210, 100%, 65%);
+  --primary-foreground: hsl(220, 8%, 8%);
+  --secondary: hsl(220, 8%, 18%);
+  --secondary-foreground: hsl(210, 8%, 90%);
+  --muted: hsl(220, 8%, 16%);
+  --muted-foreground: hsl(210, 8%, 60%);
+  --accent: hsl(210, 100%, 65%);
+  --accent-foreground: hsl(220, 8%, 8%);
+  --destructive: hsl(0, 85%, 60%);
+  --destructive-foreground: hsl(210, 8%, 90%);
+  --border: hsl(220, 8%, 20%);
+  --input: hsl(220, 8%, 16%);
+  --ring: hsl(210, 100%, 65%);
+  --radius: 0.75rem;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+}
+
+body {
+  font-family: 'Fira Code';
+}
+
+.dark {
+  --background: hsl(220, 8%, 8%);
+  --foreground: hsl(210, 8%, 90%);
+  --card: hsl(220, 8%, 12%);
+  --card-foreground: hsl(210, 8%, 90%);
+  --popover: hsl(220, 8%, 14%);
+  --popover-foreground: hsl(210, 8%, 90%);
+  --primary: hsl(210, 100%, 65%);
+  --primary-foreground: hsl(220, 8%, 8%);
+  --secondary: hsl(220, 8%, 18%);
+  --secondary-foreground: hsl(210, 8%, 90%);
+  --muted: hsl(220, 8%, 16%);
+  --muted-foreground: hsl(210, 8%, 60%);
+  --accent: hsl(210, 100%, 65%);
+  --accent-foreground: hsl(220, 8%, 8%);
+  --destructive: hsl(0, 85%, 60%);
+  --destructive-foreground: hsl(210, 8%, 90%);
+  --border: hsl(220, 8%, 20%);
+  --input: hsl(220, 8%, 16%);
+  --ring: hsl(210, 100%, 65%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+.backdrop-blur-custom {
+  backdrop-filter: blur(8px);
+}
+
+.message-content {
+  line-height: 1.6;
+}
+
+.conversation-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(220, 8%, 20%) transparent;
+}
+
+.conversation-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.conversation-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.conversation-scroll::-webkit-scrollbar-thumb {
+  background-color: hsl(220, 8%, 20%);
+  border-radius: 3px;
+}
